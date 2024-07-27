@@ -1,0 +1,14 @@
+@import './mixins.scss';
+
+.PageLogin {
+  height: calc(100vh - 65px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: pxToRem(12px);
+
+  @include respond-to('md') {
+    justify-content: center;
+    flex-direction: row;
+  }
+}

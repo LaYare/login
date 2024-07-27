@@ -1,0 +1,21 @@
+@import '../../styles/index.scss';
+
+.Button {
+  border: none;
+  cursor: pointer;
+  color: $white;
+  background-color: $black;
+  font-size: pxToRem(14.22px);
+  text-transform: uppercase;
+  line-height: pxToRem(20px);
+  padding-top: pxToRem(14px);
+  padding-bottom: pxToRem(20px);
+  margin-top: pxToRem(6px);
+  width: 100%;
+
+  &__Disabled {
+    cursor: not-allowed;
+    background-color: $light-grey;
+    color: $grey;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../styles/index.scss';
+
+.Input {
+  position: relative;
+  width: 100%;
+
+  &__Item {
+    width: 100%;
+    height: pxToRem(54px);
+    background: $white;
+    border: pxToRem(1px) solid $dark-grey;
+    padding: pxToRem(18.5px) pxToRem(16px) pxToRem(17.5px);
+    line-height: pxToRem(20px);
+    font-weight: 400;
+    font-size: pxToRem(14.13px);
+    margin: pxToRem(6px) 0;
+
+    &::placeholder {
+      color: $black;
+      font-weight: 200;
+    }
+  }
+
+  &__ShowPassword {
+    position: absolute;
+    top: pxToRem(25.5px);
+    right: pxToRem(18.83px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__HelperText {
+    font-size: pxToRem(12px);
+    color: $error;
+    padding: pxToRem(10px);
+  }
+
+  &__HasError {
+    border-color: $error;
+  }
+}

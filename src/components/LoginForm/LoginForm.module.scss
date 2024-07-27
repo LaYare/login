@@ -1,0 +1,48 @@
+@import '../../styles/index.scss';
+
+.Form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: pxToRem(1px) solid $black;
+  padding: pxToRem(50px) pxToRem(12px) pxToRem(12px);
+  box-sizing: border-box;
+
+  @include respond-to('sm') {
+    padding: pxToRem(50px) pxToRem(121px) pxToRem(113px);
+  }
+
+  @include respond-to('md') {
+    border-bottom: 0px;
+    border-right: pxToRem(1px) solid $black;
+    padding-top: 0;
+    width: pxToRem(726px);
+  }
+
+  &__Title {
+    font-weight: 500;
+    line-height: pxToRem(24px);
+    font-size: pxToRem(15.94px);
+    text-transform: uppercase;
+    margin-bottom: pxToRem(28px);
+  }
+
+  &__ForgotPassword {
+    font-size: pxToRem(8px);
+    line-height: pxToRem(12px);
+    font-weight: 400;
+    color: $blue;
+    margin-top: pxToRem(28px);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__Error {
+    color: $error;
+    margin-top: pxToRem(20px);
+  }
+}

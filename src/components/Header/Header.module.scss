@@ -1,0 +1,61 @@
+@import '../../styles/index.scss';
+
+.Header {
+  padding: pxToRem(10px) pxToRem(12px);
+
+  @include respond-to('sm') {
+    padding: pxToRem(10px) pxToRem(64px);
+  }
+
+  &__Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: pxToRem(1px) solid $black;
+    height: pxToRem(64px);
+  }
+
+  &__Logo {
+    width: max-content;
+    @include respond-to('md') {
+      width: 53%;
+      text-align: end;
+    }
+  }
+
+  &__Nav {
+    a {
+      text-decoration: none;
+    }
+    span {
+      text-transform: uppercase;
+      color: $black;
+      padding: pxToRem(4px);
+      margin-left: pxToRem(20px);
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        @include respond-to('md') {
+          background-color: $black;
+          color: $white;
+        }
+      }
+
+      .icon {
+        width: pxToRem(27px);
+        height: pxToRem(24px);
+        @include respond-to('md') {
+          display: none;
+        }
+      }
+
+      b {
+        display: none;
+        @include respond-to('md') {
+          display: inherit;
+        }
+      }
+    }
+  }
+}

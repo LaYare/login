@@ -1,0 +1,5 @@
+@import './variables.scss';
+
+@function pxToRem($px) {
+  @return #{$px / $base-font-size}rem;
+}

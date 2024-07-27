@@ -1,0 +1,25 @@
+@import '../../styles/index.scss';
+
+.CreateAccount {
+  font-size: pxToRem(16.5px);
+  text-transform: uppercase;
+  width: 100%;
+  padding: pxToRem(45px) pxToRem(12px) pxToRem(12px);
+  box-sizing: border-box;
+
+  @include respond-to('sm') {
+    padding: pxToRem(45px) pxToRem(121px) pxToRem(113px);
+  }
+
+  @include respond-to('md') {
+    width: auto;
+    padding: 0 pxToRem(102px) pxToRem(270px);
+  }
+  p {
+    padding: pxToRem(2px) 0;
+  }
+
+  button {
+    margin-top: pxToRem(24px);
+  }
+}
